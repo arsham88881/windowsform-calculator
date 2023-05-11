@@ -1,0 +1,11 @@
+E:\vvpppppppp\calculator(winform)\calculator(winform)\bin\Debug\calculator(winform).exe.config
+E:\vvpppppppp\calculator(winform)\calculator(winform)\bin\Debug\calculator(winform).exe
+E:\vvpppppppp\calculator(winform)\calculator(winform)\bin\Debug\calculator(winform).pdb
+E:\vvpppppppp\calculator(winform)\calculator(winform)\obj\Debug\calculator(winform).csproj.AssemblyReference.cache
+E:\vvpppppppp\calculator(winform)\calculator(winform)\obj\Debug\calculator(winform).csproj.SuggestedBindingRedirects.cache
+E:\vvpppppppp\calculator(winform)\calculator(winform)\obj\Debug\calculator_winform_.formcalc.resources
+E:\vvpppppppp\calculator(winform)\calculator(winform)\obj\Debug\calculator_winform_.Properties.Resources.resources
+E:\vvpppppppp\calculator(winform)\calculator(winform)\obj\Debug\calculator(winform).csproj.GenerateResource.cache
+E:\vvpppppppp\calculator(winform)\calculator(winform)\obj\Debug\calculator(winform).csproj.CoreCompileInputs.cache
+E:\vvpppppppp\calculator(winform)\calculator(winform)\obj\Debug\calculator(winform).exe
+E:\vvpppppppp\calculator(winform)\calculator(winform)\obj\Debug\calculator(winform).pdb
