@@ -12,9 +12,42 @@ namespace calculator_winform_
 {
     public partial class formcalc : Form
     {
+        decimal num1, num2, result;
+        string operat;
         public formcalc()
         {
             InitializeComponent();
+        }
+        private void btnEqual_Click(object sender, EventArgs e)
+        {
+            num2 = Convert.ToDecimal(txtResultdownner.Text);
+            switch (operat)
+            {
+                case "+":
+                    result = num1 + num2;
+                    break;
+                case "-":
+                    result = num1 - num2;
+                    break;
+                case "×":
+                    result = num1 * num2;
+                    break;
+                case "÷":
+                    result = num1 / num2;
+                    break;
+            }
+            txtResultdownner.Text = result.ToString();
+        }
+        private void btnOperators_click(object sender, EventArgs e)
+        {
+            num1 = Convert.ToDecimal(txtResultdownner.Text);
+            operat = ((Button)sender).Text;
+            txtResultdownner.Clear();
+        }
+        private void btnNumbers_click(object sender, EventArgs e)
+        {
+            txtResultdownner.Text += ((Button)sender).Text;
+            
         }
     }
 }
