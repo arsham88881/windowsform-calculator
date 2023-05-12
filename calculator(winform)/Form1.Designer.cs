@@ -324,6 +324,7 @@
             this.btnCEclear.TabIndex = 8;
             this.btnCEclear.Text = "CE";
             this.btnCEclear.UseVisualStyleBackColor = false;
+            this.btnCEclear.Click += new System.EventHandler(this.btnclear_click);
             // 
             // btnRoot
             // 
@@ -353,6 +354,7 @@
             this.btnClear.TabIndex = 6;
             this.btnClear.Text = "C";
             this.btnClear.UseVisualStyleBackColor = false;
+            this.btnClear.Click += new System.EventHandler(this.btnclear_click);
             // 
             // btnEqual
             // 
@@ -442,6 +444,7 @@
             this.btnBackspace.TabIndex = 0;
             this.btnBackspace.Text = "<<<<";
             this.btnBackspace.UseVisualStyleBackColor = false;
+            this.btnBackspace.Click += new System.EventHandler(this.btnbackspace_click);
             // 
             // txtResultupper
             // 

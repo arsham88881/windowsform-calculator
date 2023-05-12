@@ -49,5 +49,22 @@ namespace calculator_winform_
             txtResultdownner.Text += ((Button)sender).Text;
             
         }
+        private void btnclear_click(object sender, EventArgs e)
+        {
+            txtResultdownner.Clear();
+        }
+        private void btnbackspace_click(object sender, EventArgs e)
+        {
+            if (txtResultdownner.Text.Length > 1)
+            {
+                txtResultdownner.Text = txtResultdownner.Text.Substring(0, txtResultdownner.Text.Length - 1);
+            }
+            else
+            {
+                txtResultdownner.Text = "0";
+                txtResultdownner.Clear();
+            }
+            
+        }
     }
 }
