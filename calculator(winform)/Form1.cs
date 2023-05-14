@@ -21,6 +21,7 @@ namespace calculator_winform_
         private void btnEqual_Click(object sender, EventArgs e)
         {
             num2 = Convert.ToDecimal(txtResultdownner.Text);
+            txtResultupper.Text += num2.ToString(); //
             switch (operat)
             {
                 case "+":
@@ -36,12 +37,17 @@ namespace calculator_winform_
                     result = num1 / num2;
                     break;
             }
+            txtResultupper.Text += "=";
             txtResultdownner.Text = result.ToString();
+            txtResultupper.Text = txtResultdownner.Text;
+            txtResultupper.Clear();
         }
         private void btnOperators_click(object sender, EventArgs e)
         {
             num1 = Convert.ToDecimal(txtResultdownner.Text);
+            txtResultupper.Text += num1.ToString();  //
             operat = ((Button)sender).Text;
+            txtResultupper.Text += operat;  //
             txtResultdownner.Clear();
         }
         private void btnNumbers_click(object sender, EventArgs e)
@@ -49,22 +55,43 @@ namespace calculator_winform_
             txtResultdownner.Text += ((Button)sender).Text;
             
         }
+
+        private void btnPoint_Click(object sender, EventArgs e)
+        {
+            txtResultdownner.Text += ".";
+        }
+
+        private void txtResultdownner_TextChanged(object sender, EventArgs e)
+        {
+            if (txtResultdownner.Text.Contains("."))
+            {
+                btnPoint.Enabled = false;
+            }
+            else
+            {
+                btnPoint.Enabled = true;
+            }
+            //this method link to txtresultdowner for validate "." contains
+        }
+
         private void btnclear_click(object sender, EventArgs e)
         {
             txtResultdownner.Clear();
+            txtResultupper.Clear();
         }
         private void btnbackspace_click(object sender, EventArgs e)
         {
-            if (txtResultdownner.Text.Length > 1)
+            if (txtResultdownner.Text.Length >= 1)
             {
                 txtResultdownner.Text = txtResultdownner.Text.Substring(0, txtResultdownner.Text.Length - 1);
+
             }
             else
             {
                 txtResultdownner.Text = "0";
                 txtResultdownner.Clear();
             }
-            
+
         }
     }
 }

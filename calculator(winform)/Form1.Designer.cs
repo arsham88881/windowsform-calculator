@@ -197,6 +197,7 @@
             this.btnPoint.TabIndex = 5;
             this.btnPoint.Text = ".";
             this.btnPoint.UseVisualStyleBackColor = false;
+            this.btnPoint.Click += new System.EventHandler(this.btnPoint_Click);
             // 
             // btn3
             // 
@@ -461,6 +462,7 @@
             this.txtResultdownner.Name = "txtResultdownner";
             this.txtResultdownner.Size = new System.Drawing.Size(368, 72);
             this.txtResultdownner.TabIndex = 2;
+            this.txtResultdownner.TextChanged += new System.EventHandler(this.txtResultdownner_TextChanged);
             // 
             // formcalc
             // 
