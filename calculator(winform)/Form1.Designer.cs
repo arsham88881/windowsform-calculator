@@ -114,6 +114,7 @@
             this.btnsign.TabIndex = 11;
             this.btnsign.Text = "±";
             this.btnsign.UseVisualStyleBackColor = false;
+            this.btnsign.Click += new System.EventHandler(this.btnsign_Click);
             // 
             // btnzero
             // 
@@ -281,6 +282,7 @@
             this.btnkasr.TabIndex = 11;
             this.btnkasr.Text = "⅍";
             this.btnkasr.UseVisualStyleBackColor = false;
+            this.btnkasr.Click += new System.EventHandler(this.btnOperators_click);
             // 
             // btnpower
             // 

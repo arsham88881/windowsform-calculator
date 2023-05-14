@@ -12,16 +12,20 @@ namespace calculator_winform_
 {
     public partial class formcalc : Form
     {
-        decimal num1, num2, result;
+        double num1, num2, result;
         string operat;
+        
         public formcalc()
         {
             InitializeComponent();
         }
         private void btnEqual_Click(object sender, EventArgs e)
         {
-            num2 = Convert.ToDecimal(txtResultdownner.Text);
-            txtResultupper.Text += num2.ToString(); //
+            if (!(operat == "√")) //
+            {
+                num2 = Convert.ToDouble(txtResultdownner.Text);
+                txtResultupper.Text += num2.ToString(); //
+            }
             switch (operat)
             {
                 case "+":
@@ -36,6 +40,19 @@ namespace calculator_winform_
                 case "÷":
                     result = num1 / num2;
                     break;
+                case "√":
+                    result = Math.Sqrt(num1);
+                    break;
+                case "^":
+                    result = Math.Pow(num1, num2);
+                    break;
+                case "%":
+                    result = num1 % num2;
+                    break;
+                case "⅍":
+                    result = num1 / num2;
+                    break;
+
             }
             txtResultupper.Text += "=";
             txtResultdownner.Text = result.ToString();
@@ -44,11 +61,19 @@ namespace calculator_winform_
         }
         private void btnOperators_click(object sender, EventArgs e)
         {
-            num1 = Convert.ToDecimal(txtResultdownner.Text);
+            num1 = Convert.ToDouble(txtResultdownner.Text);
             txtResultupper.Text += num1.ToString();  //
             operat = ((Button)sender).Text;
-            txtResultupper.Text += operat;  //
+            if (operat == "⅍")
+            {
+                txtResultupper.Text += "/";
+            }
+            else
+            {
+                txtResultupper.Text += operat;  //
+            }
             txtResultdownner.Clear();
+            
         }
         private void btnNumbers_click(object sender, EventArgs e)
         {
@@ -74,6 +99,12 @@ namespace calculator_winform_
             //this method link to txtresultdowner for validate "." contains
         }
 
+        private void btnsign_Click(object sender, EventArgs e)
+        {
+            double temp = Convert.ToDouble(txtResultdownner.Text);
+            txtResultdownner.Text = (temp * -1).ToString();
+
+        }
         private void btnclear_click(object sender, EventArgs e)
         {
             txtResultdownner.Clear();
